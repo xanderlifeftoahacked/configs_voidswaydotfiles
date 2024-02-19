@@ -5,14 +5,14 @@
 
 
     "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
-    "modules-center": [],
+    "modules-center": ["custom/power"],
     "modules-right": ["custom/arrow9", "network", "custom/arrow7", "temperature", "custom/arrow8", "backlight", "pulseaudio","custom/arrow4", "battery", "battery#bat2", "custom/arrow3", "sway/language", "custom/arrow2", "clock", "tray"],
 
 
 	"sway/workspaces": {
         "disable-scroll": true,
         "disable-markup": true,
-        "format": "{index}" 
+        "format": "[{index}]" 
 },
 
     "sway/language": {
@@ -56,12 +56,13 @@
               "critical": 20
 },
 
-        "format": "{icon} {capacity}%",
+        "format": "{icon} {capacity}% {}",
         "format-good": "{icon} {capacity}%", 
         "format-full": "   {capacity}%",
         "format-charging": "󱐋 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
         "format-icons": ["", "", "", "", ""],
+        "exec": "cat /sys/class/power_supply/BAT0/power_now",
         "interval": 30
 },
 
@@ -122,6 +123,11 @@
        "on-click": "pavucontrol"    
 },
 
+    "custom/power": {
+        "interval": 30,
+        "exec": "~/.config/waybar/power.sh",
+        "format": "{} {}"
+},
 	"custom/arrow1": {
 		"format": "",
 		"tooltip": false
