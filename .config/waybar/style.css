@@ -162,6 +162,7 @@
 }
 
 #pulseaudio {
+	padding-left: 0pt;
 	background: @sound;
 	color: @black;
 }
@@ -192,6 +193,8 @@
 }
 
 #battery {
+	padding-left: 5pt;
+	padding-right: 5pt;
 	background: @battery;
 	color: @black;
 }
@@ -273,4 +276,3 @@
 	color: @unfocused;
 	background: transparent;
 }
-
