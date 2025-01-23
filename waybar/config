@@ -1,0 +1,175 @@
+{
+	"layer": "top",	
+	"position": "top",
+    "height": 10,
+
+
+    "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
+    "modules-center": ["custom/power"],
+    "modules-right": ["custom/arrow9", "network", "custom/arrow7", "temperature", "custom/arrow8", "backlight", "pulseaudio","custom/arrow4", "battery", "battery#bat2", "custom/arrow3", "sway/language", "custom/arrow2", "clock", "tray"],
+
+
+	"sway/workspaces": {
+        "disable-scroll": true,
+        "disable-markup": true,
+        "format": "[{index}]" 
+},
+
+    "sway/language": {
+  	    "format": "{}",
+},
+
+	"sway/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+
+	"custom/scratch": {
+   		"interval": 3,
+   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+   		"format": "^{}", 
+   		"on-click": "swaymsg 'scratchpad show'",
+   		"on-click-right": "swaymsg 'move scratchpad'"
+},
+
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+},
+
+
+    "clock": {
+        "format": "{:%b %e %R}",
+        "interval": 30
+},
+
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+              "full": 99,
+              "good": 98,
+              "normal": 98,
+},
+
+        "format": "{icon} {capacity}% {}",
+        "format-good": "{icon} {capacity}%", 
+        "format-full": " ",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 30
+},
+
+    "battery#bat2": {
+        "bat": "BAT1",
+        "states": {
+              "full": 99,
+              "good": 98,
+              "normal": 98,
+},
+
+        "format": "{icon} {capacity}%",
+        "format-good": "{icon} {capacity}%", 
+        "format-full": " ",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 30
+},
+
+
+
+    "network": {
+        "interface": "wlp3s0", 
+        "format-wifi": " {essid}",
+        "format-disconnected": "睊   Disconnected",
+        "interval": 60
+},
+
+
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+},
+
+
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": " {percent}%",
+    	"interval": 60
+},
+
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted":"" ,
+        "interval": 60,
+
+        "format-icons": {
+        "default": [""]
+        },
+            
+       "on-click": "pavucontrol"    
+},
+
+    "custom/power": {
+        "interval": 30,
+        "exec": "~/.config/waybar/power.sh",
+        "format": "{} {}"
+},
+	"custom/arrow1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow3": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow4": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow5": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow8": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow9": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	}
+}

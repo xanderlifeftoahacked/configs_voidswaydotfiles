@@ -1,0 +1,2 @@
+launcher = [ "tofi", "--fuzzy-match=true", "--prompt-text=copy: " ]
+history_size = 50

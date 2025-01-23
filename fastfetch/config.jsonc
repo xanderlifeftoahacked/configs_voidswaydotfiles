@@ -1,0 +1,113 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "color": {
+      "1": "cyan"
+    },
+    "padding": {
+      "left": 3,
+      "top": 1,
+    }
+    // "type": "kitty-direct",
+    // "source": "~/Pictures/bocchi-2049.png",
+    // "padding": {
+      // "left": 5,
+      // "top": 3
+    // }
+  },
+  "display": {
+    "separator": " ",
+    "color": "cyan"
+  },
+  "modules": [
+    {
+      "type": "title",
+      "keyColor": "blue"
+    },
+    "separator",
+    {
+      "type": "host",
+      "key": "host",
+      "keyColor": "red"
+    },
+    {
+      "type": "kernel",
+      "key": "kernel",
+      "keyColor": "red"
+    },
+    {
+      "type": "uptime",
+      "key": "uptime",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "packages",
+      "key": "packages",
+      "keyColor": "yellow"
+    },
+    // {
+    //   "type": "icons",
+    //   "key": "icons",
+    //   "keyColor": "yellow"
+    // },
+    {
+      "type": "terminalfont",
+      "key": "font",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "display",
+      "key": "display",
+      "keyColor": "yellow"
+    },
+    // {
+    //   "type": "cpu",
+    //   "key": "cpu",
+    //   "keyColor": "yellow"
+    // },
+    // {
+    //   "type": "gpu",
+    //   "key": "gpu",
+    //   "keyColor": "yellow"
+    // },
+    {
+      "type": "memory",
+      "key": "memory",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "swap",
+      "key": "swap",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "disk",
+      "key": "disk",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "localip",
+      "key": "ip",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "battery",
+      "key": "bat",
+      "keyColor": "red"
+    },
+    {
+      "type": "poweradapter",
+      "key": "poweradapter",
+      "keyColor": "red"
+    },
+    {
+      "type": "locale",
+      "key": "loc",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "break"
+    }
+  ]
+}
